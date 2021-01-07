@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+        <!-- MODULES -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+        <!-- JS -->
+        <script type="text/javascript" src="./js/auth-manager.js"></script>
+        <script type="text/javascript" src="./js/content-manager.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <form id="login">
+                <input type="text" placeholder="email" />
+                <input type="password" placeholder="password" autocomplete="on"/>
+                <input type="submit" value="Log In">
+            </form>
+            <span id="loginInfo" class="hidden"></span>
+            <button id="logout" class="hidden">Log Out</button>
+        </header>
+        <div id="contentInfo"></div>
+        <div id="content">
+            <div class="caseWrapper">
+                <h2 class="caseTitle">Please review this case:</h2>
+                <textarea id="case" readonly></textarea>
+            </div>
+            <div class="conditionsWrapper">
+                <h2 class="conditionsTitle">Select Condition:</h2>
+                <select id="conditions"></select>
+                <button id="nextCase" disabled>Next Case</button>
+            </div>
+        </div>
+    </body>
+</html>
